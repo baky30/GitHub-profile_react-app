@@ -1,0 +1,13 @@
+.repo-item {
+    // border: solid 1px black;
+    background-color: white;
+    padding: 24px 32px;
+    margin-bottom: 24px;
+
+    .name {
+        margin-bottom: 16px;
+        a {
+            color: #0064EB;
+        }
+    }
+}

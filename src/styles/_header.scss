@@ -1,0 +1,31 @@
+.header {
+    background: #0064EB;
+    display: flex;
+    padding: 16px 0;
+
+    .git-icon {
+        margin-left: 41px;
+    }
+    
+    .search-section {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        width: 500px;
+        border-radius: 6px;
+        margin-left: 22px;
+
+        
+        .search {
+            border: none;
+            outline: none;
+            background: url('../assets/SearchIcon.svg') no-repeat 3% ;
+            background-size: 14px 14px;
+
+            width: 100%;
+            padding: 0 40px;
+        }
+
+    }
+
+}

@@ -1,38 +1,258 @@
-.App {
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #E5E5E5;
+  font-family: Inter;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  width: 92%;
+  margin: 0 auto;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.image-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header {
+  background: #0064EB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px 0;
+}
+
+.header .git-icon {
+  margin-left: 41px;
+}
+
+.header .search-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  width: 500px;
+  border-radius: 6px;
+  margin-left: 22px;
+}
+
+.header .search-section .search {
+  border: none;
+  outline: none;
+  background: url("../assets/SearchIcon.svg") no-repeat 3%;
+  background-size: 14px 14px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.profile-section {
+  margin-top: 39px;
+  width: 20%;
+}
+
+.profile-section .image-wrapper {
+  border-radius: 50%;
+}
+
+.profile-section .image-wrapper .profile-avatar {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+}
+
+.profile-section .profile-username {
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+
+.profile-section .profile-link {
+  color: #0064EB;
+}
+
+.profile-section .profile-followers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.profile-section .profile-followers span {
+  margin-left: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.centered p {
+  color: #808080;
   text-align: center;
+  margin-top: 47px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.repos-section {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.repos-section .count-text {
+  margin: 28px 0;
+}
+
+.repos-section .list {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.repos-section .pagination-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #808080;
+  margin-bottom: 20px;
+}
+
+.repos-section .pagination-section .buttons {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.repos-section .pagination-section .buttons .active {
+  border-radius: 3px;
+  padding: 2px 6px;
+  background: #0064EB;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.repos-section .pagination-section .buttons li {
+  margin: 0 11px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.repos-section .arrow:hover path {
+  stroke: #0064EB;
 }
+
+.repos-section .left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.repo-item {
+  background-color: white;
+  padding: 24px 32px;
+  margin-bottom: 24px;
+}
+
+.repo-item .name {
+  margin-bottom: 16px;
+}
+
+.repo-item .name a {
+  color: #0064EB;
+}
+/*# sourceMappingURL=App.css.map */
