@@ -12,7 +12,6 @@ export default function ReposList({ repos }) {
     const reposPerPage = 4
     const pagesVisited = currentPageNumber * reposPerPage
     const pageCount = Math.ceil(repos.length / reposPerPage)
-
     const displayRepos = repos.slice(pagesVisited, pagesVisited + reposPerPage)
 
     const changeCurrentPage = ({ selected }) => {
