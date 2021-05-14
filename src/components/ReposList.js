@@ -7,7 +7,7 @@ import {ReactComponent as Arrow} from '../assets/Arrow.svg'
 export default function ReposList({ repos }) {
     const [currentPageNumber, setCurrentPageNumber] = useState(0)
     
-    if(repos.length == 0) return <EmptyRepository />;
+    if(repos.length === 0) return <EmptyRepository />;
     
     const reposPerPage = 4
     const pagesVisited = currentPageNumber * reposPerPage

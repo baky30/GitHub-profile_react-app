@@ -5,3 +5,23 @@
 @import "./styles/preloader";
 @import "./styles/repositories";
 @import "./styles/repoitem";
+
+@media screen and (max-width: 930px) {
+    main {
+        flex-direction: column;
+        
+        .profile-section {
+            align-items: center;
+            width: 100%;
+            
+            .profile-followers {
+                justify-content: flex-start;
+            }
+
+        }
+        .repos-section {
+            width: 100%;
+            height: 500px;
+        }
+    }
+}
